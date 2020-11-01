@@ -26,6 +26,6 @@ Clone this repo with `git clone https://github.com/kernel-pan-ic/bmdsmdconvert.g
 
 To build on Linux, run `./gradlew build`.
 
-On Windows, do `gradlew.bat build`.
+On Windows, run `gradlew.bat build`.
 
 The compiled output will be at `build/libs/bmdsmdconvert-all.jar`.
