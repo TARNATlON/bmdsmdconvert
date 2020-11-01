@@ -41,28 +41,6 @@ public class Main {
             System.exit(1);
         }
 
-//        for (String argument : args) {
-//            if (argument.equals("-h") || argument.equals("--h") || argument.equals("-help") || argument.equals("--help")) {
-//                printHelp();
-//            }
-//        }
-//
-//        if (args.length != 3) {
-//            printHelp();
-//        }
-//
-//        Boolean toSMD = null;
-//        if (args[0].contains("-s")) {
-//            toSMD = true;
-//        } else if (args[0].contains("-b")) {
-//            toSMD = false;
-//        } else {
-//            printHelp();
-//        }
-//
-//        String inputFilePath = args[1];
-//        String outputFilePath = args[2];
-
         String inputFilePath = arguments.getOptionValue("input");
         String outputFilePath = arguments.getOptionValue("output");
 
@@ -566,14 +544,6 @@ public class Main {
             System.out.println("Something's gone wrong, look at the stack trace above for details. :(");
             System.exit(1);
         }
-    }
-
-    private static void printHelp() {
-        System.out.println("Usage: bmdsmdconvert (-b or -s) [optionally -b00b] inputfile outputfile\n" +
-                "-b is for SMD to BMD and -s for BMD to SMD, you must include one of them.\n" +
-                "-b00b will write hex B00B in some spaces that Pixelmon doesn't use, for the BMD format\n" +
-                ":)");
-        System.exit(0);
     }
 
     private static String readNullTerm(DataInputStream in) throws IOException {
