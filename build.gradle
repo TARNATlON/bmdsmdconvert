@@ -1,0 +1,20 @@
+plugins {
+    id 'com.github.johnrengelman.shadow' version '6.1.0'
+    id 'application'
+}
+
+shadowJar {
+    archiveBaseName = "bmdsmdconvert"
+    mainClassName = 'co.hailsatan.Main'
+    project.configurations.implementation.canBeResolved = true
+    configurations = [project.configurations.implementation]
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'commons-cli:commons-cli:1.4'
+    testImplementation 'junit:junit:4.13.1'
+}
